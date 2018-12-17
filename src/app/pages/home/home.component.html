@@ -1,0 +1,151 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-6 current-bets">
+      
+      <div class="row">
+        <div class="col-12">
+          <h1>Destaques</h1>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-12 highlight">
+          <figure>
+            <img src="https://www.torcedores.com/content/uploads/2018/09/PSG4.jpg" alt="">
+            <figcaption>Façam suas Apostas!</figcaption>
+          </figure>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-12">
+          <h1>Ao vivo</h1>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <span class="date">
+            16'
+          </span>
+          <h2>Campeonato brasileiro</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4 team">
+              São Paulo<br/>
+              <span class="payback">x0.5</span>
+              <img src="https://logodownload.org/wp-content/uploads/2016/09/sao-paulo-logo-escudo-2.png" />
+            </div>
+            <div class="col-4 percentage"> 
+              <p> 2 </p>
+              <span>X</span> 
+              <p> 1 </p>
+            </div>
+            <div class="col-4 team team-away">
+              Santos <br/>
+              <span class="payback">x5.8</span>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Santos_logo.svg/1045px-Santos_logo.svg.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col-12">
+            <h1>Campeonatos</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 leagues">
+            <a class="active" (click)="changeCurrentCup()">Campeonato Brasileiro</a>
+            <a>Campeonato Inglês</a>
+            <a>Champions League</a>
+            <a>Europe League</a>
+          </div>
+        </div>
+
+        <ul class="next-games" *ngIf="currentCup == 'brasil'">
+          <li *ngFor="let item of brasil">
+            <div class="row">
+              <div class="col-4">
+                <span>{{ item.teams[0].name }}</span>
+                <img [src]="item.teams[0].img" />
+              </div>
+              <div class="col-4 percentage">
+                  <p>{{ Math.floor(Math.random() * 100) }}% </p>
+                  <span>X</span> 
+                  <p>{{ Math.floor(Math.random() * 100) }}%</p>
+              </div>
+              <div class="col-4">
+                  <span>{{ item.teams[1].name }}</span>
+                  <img [src]="item.teams[1].img" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <span class="date">
+                  {{ item.date }}
+                </span>
+                <span>
+                  {{ item.location }}
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="next-games" *ngIf="currentCup == 'english'">
+          <li></li>
+        </ul>
+        <ul class="next-games" *ngIf="currentCup == 'uefa'">
+          <li></li>
+        </ul>
+        <ul class="next-games" *ngIf="currentCup == 'europe'">
+          <li></li>
+        </ul>
+      
+    </div>
+    <div class="col-12 col-sm-6">
+      
+      <div class="row">
+        <div class="col-12">
+          <h1>Próximos Jogos</h1>
+        </div>
+      </div>
+      
+      
+      <div class="row" *ngFor="let item of games">
+        <div class="card col-12">
+          <div class="card-header">
+            <span class="date">
+              {{ item.date }}
+            </span>
+            <h2>{{ item.cup }}</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-4 team">
+                {{ item.teams[0].name }}<br/>
+                <span class="payback">x0.8</span>
+                <img [src]="item.teams[0].img" />
+              </div>
+              <div class="col-4 percentage"> 
+                <p>{{ Math.floor(Math.random() * 100) }}% </p>
+                <span>X</span> 
+                <p>{{ Math.floor(Math.random() * 100) }}%</p>
+              </div>
+              <div class="col-4 team team-away">
+                {{ item.teams[1].name }} <br/>
+                <span class="payback">x2.8</span>
+                <img [src]="item.teams[1].img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>

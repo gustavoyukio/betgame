@@ -1,0 +1,228 @@
+.card {
+    padding: 0;
+    margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px 0px;
+    .card-header {
+        font-size: 12px;
+        color: #000;
+        background-color: #e7e7e7;
+        h2 {
+            float: right;
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+        }
+    }
+
+    .card-body {
+        color: rgba(128, 128, 128, 0.452);
+        background-color: #eee;
+        font-size: 13px;
+        font-weight: bold;
+        padding-bottom: 0;
+        div {
+            text-align: center;
+            &.team {
+                font-weight: bold;
+                text-align: right;
+                padding-right: 50px;
+                position: relative;
+                line-height: 20px;
+                img {
+                    width: 40px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                .payback {
+                    color: rgb(86, 170, 86);
+                }
+            }
+
+            &.team-away {
+                text-align: left;
+                padding-right: 0;
+                padding-left: 50px;
+                img {
+                    right: initial;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    padding-bottom: 15px;
+    font-size: 22px;
+    color: #b0b0b0;
+    text-transform: uppercase;
+}
+
+.highlight {
+    overflow: hidden;
+    
+    figure {
+        width: 100%;
+        position: relative;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    img {
+        width: 100%;
+        border-radius: 6px;
+    }
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        padding: 10px 20px;
+        background-color: rgba(0,0,0,0.7);
+        margin: 0;
+        display: block;
+        width: 100%;
+        color: rgb(224, 224, 224);
+    }
+}
+
+.current-bets {
+    .card {
+        .card-body {
+            background-color: #fff;
+        }
+    }
+}
+
+.leagues {
+    text-align: center;
+    a {
+        display: inline-block;
+        font-size: 12px;
+        padding: 6px 6px;
+        margin: 0 3px;
+        background-color: #fff;
+        border-radius: 6px;
+        color: #777;
+        cursor: pointer;
+        &.active {
+            background-color: #2a64bc;
+            color: #fff;
+        }
+    }
+}
+
+.next-games {
+    margin: 10px 0;
+    li {
+        background-color: #fff;
+        margin: 10px 0;
+        padding: 12px 15px;
+        color: rgb(175, 175, 175);
+        border-radius: 6px;
+        .col-4 {
+            position: relative;
+            line-height: 30px;
+            span {
+                line-height: 20px;
+                padding: 0;
+                display: inline-block;
+            }
+            img {
+                width: 30px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:nth-child(1) {
+                text-align: left;
+                padding-left: 40px;
+                img {
+                    left: 5px;
+                }
+            }
+            &:nth-child(3) {
+                text-align: right;
+                padding-right: 40px;
+                img {
+                    right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.card-body, li {
+    .percentage {
+        p {
+            line-height: 40px;
+        }
+        span {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #e4e4e4;
+            line-height: 27px;
+            text-align: center;
+            margin: 0 10px;
+            position: relative;
+            top: -7px;
+        }
+        p, span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+.next-games {
+    padding-bottom: 0;
+li {
+    padding-bottom: 0;
+    overflow: hidden;
+    border:1px solid rgb(206, 206, 206);
+    .percentage {
+        line-height: 10px;
+        position: relative;
+        p {
+            padding: 0;
+            margin: 0;
+            line-height: 30px;
+            &:nth-child(1) {
+                float: left;
+            }
+            &:nth-child(3) {
+                float: right;
+            }
+        }
+        span {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            line-height: 26px;
+            transform: translate(-50%, -50%);
+            margin: 0;
+        }
+    }
+    .row {
+        &:nth-child(1) {
+            padding-bottom: 10px;
+        }
+        &:nth-child(2) {
+            padding-top: 10px;
+            line-height: 10px;
+            padding: 8px 0;
+            background-color: #e7e7e7;
+            span {
+                font-size: 12px;
+                color: #888;            
+                &:nth-child(1) {
+                    float: left;
+                }
+                &:nth-child(2) {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+}
